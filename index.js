@@ -219,3 +219,8 @@ iceWarning('Third St and California Ave');
 iceWarning('Forth St and North Carolina Ave');
 iceWarning('Fifth St and New York Ave');
 iceWarning('Sixth St and Ohio Ave');
+
+let turtleMoves = [[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]];
+
+turtleMoves.filter(move => move[0] >= 0 && move[1] >= 0).map(move => move[0] + move[1]).forEach(move => console.log(move));
+
