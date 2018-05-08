@@ -224,3 +224,14 @@ let turtleMoves = [[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]];
 
 turtleMoves.filter(move => move[0] >= 0 && move[1] >= 0).map(move => move[0] + move[1]).forEach(move => console.log(move));
 
+const encoded = 'noggin oreo the moon time tele steed his tent apollo her lives though shoo tofu budapest'.split(' ');
+const reducer = function(accumulator, currentValue){
+  if (currentValue.length <= 3){
+    return accumulator + ' ';
+  }
+  else {
+    return accumulator + currentValue[currentValue.length-1].toUpperCase();
+  }
+};
+
+console.log(encoded.reduce(reducer, ''));
