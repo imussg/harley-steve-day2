@@ -182,3 +182,40 @@ function filter(arr, fn) {
 }
 
 console.log(filter(myNames,(name) => {return name[0] === 'R';}));
+
+function hazardWarningCreator(typeOfWarning) {
+  let warningCounter = 0;
+  return function(location) {
+    warningCounter++;
+    console.log(`DANGER! There is a ${typeOfWarning} hazard at ${location}`);
+    console.log(`The ${typeOfWarning} has been triggered ${warningCounter} time(s) today!`);
+  }
+}
+
+const rocksWarning = hazardWarningCreator('Rocks on the Road');
+const apocalypseWarning = hazardWarningCreator('Apocalypse on the road and elsewhere');
+const iceWarning = hazardWarningCreator('Ice on the Road');
+
+rocksWarning('Main St and Pacific Ave');
+rocksWarning('First St and Atlantic Ave');
+rocksWarning('Second St and Maryland Ave');
+rocksWarning('Third St and California Ave');
+rocksWarning('Forth St and North Carolina Ave');
+rocksWarning('Fifth St and New York Ave');
+rocksWarning('Sixth St and Ohio Ave');
+
+apocalypseWarning('Main St and Pacific Ave');
+apocalypseWarning('First St and Atlantic Ave');
+apocalypseWarning('Second St and Maryland Ave');
+apocalypseWarning('Third St and California Ave');
+apocalypseWarning('Forth St and North Carolina Ave');
+apocalypseWarning('Fifth St and New York Ave');
+apocalypseWarning('Sixth St and Ohio Ave');
+
+iceWarning('Main St and Pacific Ave');
+iceWarning('First St and Atlantic Ave');
+iceWarning('Second St and Maryland Ave');
+iceWarning('Third St and California Ave');
+iceWarning('Forth St and North Carolina Ave');
+iceWarning('Fifth St and New York Ave');
+iceWarning('Sixth St and Ohio Ave');
